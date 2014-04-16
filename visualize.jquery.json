@@ -1,7 +1,7 @@
 {
     "name": "visualize",
-    "version": "0.1.0",
-    "title": "Listify",
+    "version": "0.1.2",
+    "title": "Visualize",
     "description": "A jQuery plugin that converts markup to canvas bar or pie charts.",
     "keywords": [
         "jquery",
