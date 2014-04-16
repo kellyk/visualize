@@ -1,5 +1,5 @@
 # Visualize jQuery Plugin
-Generate bar and pie charts using HTML.
+Generate bar and pie charts using HTML. Demo available on [Code Pen](http://codepen.io/kellyk/pen/vdrnL) or at [kellyking.me/projects/visualize](http://www.kellyking.me/projects/visualize).
 
 Example usage:
 
@@ -11,7 +11,7 @@ Example usage:
 
     <script>
        $('.myPieChart').visualize({
-            width: 300,
+            width: 325,
             type: 'pie',
             legend: true
        });
@@ -28,6 +28,12 @@ Any items with a class of 'visualize' nested within the selector will be added t
 
 Optional parameters to the visualize method include:
 
-  * width, height (numeric; default = 300)
-  * type ('pie' or 'bar'; default = 'pie')
-  * legend (true or false; default = false)
+  * width, height
+    - numeric
+    - default is 300
+  * type
+    - 'pie' or 'bar'
+    - default is 'pie'
+  * legend 
+    - true or false
+    - default is false
