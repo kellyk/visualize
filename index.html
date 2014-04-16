@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>jQuery Visualize Plugin</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .wrapper { width: 550px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>jQuery Visualize Plugin</h1>
+        <ul class="pie">
+            <li class="visualize" data-value="1">Winter</li>
+            <li class="visualize" data-value="1">Summer</li>
+            <li class="visualize" data-value="2">Spring</li>
+            <li class="visualize" data-value="2">Fall</li>
+        </ul>
+        <ul class="bar">
+            <li class="visualize" data-value="29" data-color="#ff33cc">Monday</li>
+            <li class="visualize" data-value="31">Tuesday</li>
+            <li class="visualize" data-value="40" data-color="deepskyblue">Wednesday</li>
+            <li class="visualize" data-value="10" data-color="rgb(255, 0, 0)">Thursday</li>
+            <li class="visualize" data-value="20">Friday</li>
+            <li class="visualize" data-value="13">Saturday</li>
+            <li class="visualize" data-value="3">Sunday</li>
+        </ul>
+    </wrapper>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="js/visualize.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.pie').visualize({
+                width: 300,
+                type: 'pie',
+                legend: true
+            });
+
+            $('.bar').visualize({
+                width: 400,
+                height: 300,
+                type: 'bar'
+            });
+        });
+    </script>
+</body>
+</html>
