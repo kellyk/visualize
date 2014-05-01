@@ -10,7 +10,7 @@
             var chart;
             var width = options.width || 300;
             var height = options.height || options.width || 300;
-            var canvas = $('<canvas width=' + width + ' height=' + height + '></canvas>');
+            var canvas = $('<canvas width=' + width + ' height=' + height + '></canvas>').html(div.innerHTML);
             var items = getData(div);
 
             if (type === 'pie') { chart = new Pie(items, width); }
