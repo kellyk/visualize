@@ -23,7 +23,9 @@
         });
     };
 
-    var legend = function(div, width) {
+    var Chart = function() {};
+
+    Chart.prototype.legend = function(div, width) {
         var legend = $('<div></div>').css('width', width);
         $.each(this.items, function(idx, item) {
             var swatch = $('<span></span>')
@@ -40,9 +42,12 @@
     };
 
     var Pie = function(items, width) {
+        Chart.call(this);
         this.radius = width/2;
         this.items = items;
     };
+
+    Pie.prototype = Object.create(Chart.prototype);
 
     Pie.prototype.getTotal = function() {
         var total = 0;
@@ -70,13 +75,13 @@
         }
     };
 
-    Pie.prototype.legend = legend;
-
     var Bar = function(items, width, height) {
         this.items = items;
         this.width = width;
         this.height = height;
     };
+
+    Bar.prototype = Object.create(Chart.prototype);
 
 	Bar.prototype.getWidth = function() {
 		return (this.width / this.items.length);
@@ -106,8 +111,6 @@
             ctx.fill();
         }
     };
-
-    Bar.prototype.legend = legend;
 
     var randomColor = function() {
         var letters = '0123456789ABCDEF'.split('');
